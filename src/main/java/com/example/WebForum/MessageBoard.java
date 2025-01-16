@@ -34,7 +34,7 @@ public class MessageBoard {
 
             i++;
 
-            if(i == posts.size()-1){
+            if(i == posts.size()){
                 i = 0;
             }
         }
@@ -45,8 +45,8 @@ public class MessageBoard {
     void addPost(Post p){
         if(posts.size() == maxSize){
             posts.set(startPoint,p);
-            //System.out.println(startPoint);
-            //System.out.println(endpoint);
+            System.out.println(startPoint);
+            System.out.println(endpoint);
             startPoint++;
             endpoint++;
             if(startPoint == maxSize){
