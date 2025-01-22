@@ -19,7 +19,7 @@ public class WebClient {
 
     @PostMapping("newMessage")
     @ResponseBody
-    public String addPost(@RequestParam String username, @RequestParam String content){
+    public String addPost(@RequestParam String content, @RequestParam String username){
         board.addPost(new Post(username, content));
         return "Success";
     }
